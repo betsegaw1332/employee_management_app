@@ -54,12 +54,15 @@ abstract class AppTheme {
       useMaterial3: true,
       textTheme: lightTextTheme,
       primaryColor: AppColors.appPrimaryColor,
-      scaffoldBackgroundColor: AppColors.appBackgroundColor,
+      scaffoldBackgroundColor: Colors.white,
+    
       bottomNavigationBarTheme:
           const BottomNavigationBarThemeData(backgroundColor: Colors.white),
       appBarTheme: AppBarTheme(
+          
           elevation: 0,
           color: AppColors.appPrimaryColor,
+          iconTheme:const IconThemeData(color: Colors.white),
           titleTextStyle:  TextStyle(color: Colors.white,fontSize: 16.sp)),
       textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(

@@ -1,8 +1,8 @@
+
+import 'package:employee_management_app/src/presentation/pages/pages.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:employee_management_app/src/utils/utils.dart';
-
-import '../presentation/pages/pages.dart';
 
 abstract class AppRouter {
   static final router = GoRouter(routes: <RouteBase>[
@@ -10,14 +10,19 @@ abstract class AppRouter {
         path: '/',
         name: AppRoutes.rootRouteName,
         redirect: ((context, state) =>
-            state.namedLocation(AppRoutes.homeRoute))),
+            state.namedLocation(AppRoutes.listEmployeeRoute))),
     GoRoute(
-        path: '/home',
-        name: AppRoutes.homeRoute,
+        path: '/list-employee',
+        name: AppRoutes.listEmployeeRoute,
         pageBuilder: (context, state) =>
-            const MaterialPage<void>(child: HomePage()),
-        routes: const[
-          
+            const MaterialPage<void>(child: ListEmployeePage()),
+        routes: [
+           GoRoute(
+            path: 'add-employee',
+            name: AppRoutes.addEmployeeRoute,
+            pageBuilder: (context, state) =>
+                const MaterialPage<void>(child: AddEmployeePage()),
+          ),
         ] )
   ]);
 }
