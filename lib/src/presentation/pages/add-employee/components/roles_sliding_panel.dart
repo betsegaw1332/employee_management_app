@@ -18,6 +18,7 @@ class _RolesSlidingPanelState extends State<RolesSlidingPanel> {
   @override
   Widget build(BuildContext context) {
     return SlidingUpPanel(
+        
         minHeight: 0,
         maxHeight: .255.sh,
         controller: widget.controller,

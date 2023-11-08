@@ -8,6 +8,7 @@ class CustomTextField extends StatelessWidget {
   final IconData? suffixIcon;
   final Function()? onTap;
   final bool isReadOnly;
+  final bool hasValidator;
   final TextEditingController controller;
   const CustomTextField(
       {super.key,
@@ -15,12 +16,15 @@ class CustomTextField extends StatelessWidget {
       this.suffixIcon,
       required this.controller,
       this.onTap,
-      this.isReadOnly=false,
+      this.isReadOnly = false,
+      this.hasValidator = true,
       required this.hintText});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      
+      validator: hasValidator ? AppHelperFunctions.validateTextField : null,
       readOnly: isReadOnly,
       onTap: onTap,
       controller: controller,

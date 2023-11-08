@@ -6,7 +6,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 class DateSelectorDialog extends StatefulWidget {
-  const DateSelectorDialog({super.key, required this.isFromDateSelector});
+  const DateSelectorDialog(
+      {super.key,
+      required this.isFromDateSelector,});
   final bool isFromDateSelector;
   @override
   State<DateSelectorDialog> createState() => _DateSelectorDialogState();
@@ -18,7 +20,7 @@ class _DateSelectorDialogState extends State<DateSelectorDialog> {
   bool timePickerEnabled = false;
   Duration duration = const Duration(hours: 1, minutes: 23);
   int selectedButtonIndex = 0;
-  
+
   _updateSlectedButtonIndex({required int index}) {
     setState(() {
       selectedButtonIndex = index;
@@ -27,8 +29,8 @@ class _DateSelectorDialogState extends State<DateSelectorDialog> {
 
   @override
   void initState() {
-    if(widget.isFromDateSelector){
-      _selectedDay=DateTime.now();
+    if (widget.isFromDateSelector) {
+      _selectedDay = DateTime.now();
     }
     super.initState();
   }
@@ -198,7 +200,7 @@ class _DateSelectorDialogState extends State<DateSelectorDialog> {
                       ),
                       formatButtonVisible: false,
                       titleCentered: true),
-                  firstDay: DateTime.now(),
+                  firstDay: DateTime.utc(1990, 10, 16),
                   lastDay: DateTime.utc(2050, 3, 14),
                   focusedDay: _focusedDay,
                   selectedDayPredicate: (day) {
@@ -223,7 +225,7 @@ class _DateSelectorDialogState extends State<DateSelectorDialog> {
                 Navigator.pop(context);
               },
               onSave: () {
-                Navigator.pop(context,_selectedDay);
+                Navigator.pop(context, _selectedDay);
               },
             )
           ],

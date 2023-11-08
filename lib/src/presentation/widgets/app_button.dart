@@ -16,12 +16,13 @@ class AppButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
         style: ElevatedButton.styleFrom(
+            
             elevation: 0,
             foregroundColor:isActive? Colors.white:AppColors.appPrimaryColor,
             backgroundColor: isActive
                 ? AppColors.appPrimaryColor
                 : AppColors.primaryColorLighter,
-            padding: EdgeInsets.symmetric(vertical: 9.h),
+            padding: EdgeInsets.symmetric(vertical: 9.h,),
             shape: RoundedRectangleBorder(
                 borderRadius:
                     BorderRadius.circular(AppNumbers.buttonBorderRadius.sp))),
