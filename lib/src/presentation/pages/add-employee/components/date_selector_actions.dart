@@ -51,7 +51,7 @@ class DateSelectorActions extends StatelessWidget {
           flex: 1,
           child: AppButton(
             isActive: false,
-            onPressed: () {},
+            onPressed: onCancel,
             buttonName: AppStrings.cancelText,
           ),
         ),
@@ -62,7 +62,7 @@ class DateSelectorActions extends StatelessWidget {
           flex: 1,
           child: AppButton(
             isActive: true,
-            onPressed: () {},
+            onPressed: onSave,
             buttonName: AppStrings.saveText,
           ),
         ),

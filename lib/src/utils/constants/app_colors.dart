@@ -10,6 +10,8 @@ abstract class AppColors {
       
   static final Color appSecondaryColor =
       HexColor.fromHex(AppStrings.secondaryColor);
+  static final Color lightBlackColor =
+      HexColor.fromHex(AppStrings.lightBlackColor);
 
   static final Color appBackgroundColor =
       HexColor.fromHex(AppStrings.appBackgroundColor);

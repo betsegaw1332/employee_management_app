@@ -39,6 +39,7 @@ dependencies:
   go_router: ^12.1.0
   table_calendar: ^3.0.9
   intl: ^0.18.1
+  sliding_up_panel: ^2.0.0+1
 
 dev_dependencies:
   flutter_test:

@@ -6,6 +6,7 @@ abstract class AppStrings {
   static const String greyColor='#949C9E';
   static const String greyLighterColor = '#E5E5E5';
   static const String primaryColorLighter="#EDF8FF";
+  static const String lightBlackColor="#323238";
 
   
 
@@ -21,4 +22,11 @@ abstract class AppStrings {
   static const String afterOneWeekText='After 1 week';
   static const String cancelText='Cancel';
   static const String saveText='Save';
+
+  static const List<String> selectRoles=[
+    "Product Designer",
+    "Flutter developer",
+    "QA Tester",
+    "Product Owner"
+  ];
 }

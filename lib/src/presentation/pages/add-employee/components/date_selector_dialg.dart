@@ -219,8 +219,12 @@ class _DateSelectorDialogState extends State<DateSelectorDialog> {
             ),
             DateSelectorActions(
               selectedDate: _selectedDay,
-              onCancel: () {},
-              onSave: () {},
+              onCancel: () {
+                Navigator.pop(context);
+              },
+              onSave: () {
+                Navigator.pop(context,_selectedDay);
+              },
             )
           ],
         ));

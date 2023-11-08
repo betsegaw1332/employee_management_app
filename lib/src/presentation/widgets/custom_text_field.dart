@@ -7,6 +7,7 @@ class CustomTextField extends StatelessWidget {
   final IconData prefixIcon;
   final IconData? suffixIcon;
   final Function()? onTap;
+  final bool isReadOnly;
   final TextEditingController controller;
   const CustomTextField(
       {super.key,
@@ -14,18 +15,21 @@ class CustomTextField extends StatelessWidget {
       this.suffixIcon,
       required this.controller,
       this.onTap,
+      this.isReadOnly=false,
       required this.hintText});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      readOnly: isReadOnly,
       onTap: onTap,
+      controller: controller,
       autovalidateMode: AutovalidateMode.onUserInteraction,
       style: const TextStyle(color: Colors.black),
       decoration: InputDecoration(
         hintText: hintText,
         suffixIcon: suffixIcon == null
-            ? const SizedBox.shrink()
+            ? null
             : Icon(
                 suffixIcon!,
                 color: AppColors.appPrimaryColor,
