@@ -27,7 +27,7 @@ class EmployeeListBuilder extends StatelessWidget {
             title,
             style: TextStyle(
                 color: AppColors.appPrimaryColor,
-                fontSize: 15.sp,
+                fontSize: 14.5.sp,
                 fontWeight: FontWeight.w500),
           ),
         ),

@@ -1,7 +1,6 @@
 import 'package:employee_management_app/src/domain/domain.dart';
 import 'package:employee_management_app/src/presentation/blocs/blocs.dart';
 import 'package:employee_management_app/src/presentation/pages/list-employee/components/emoloyee_list_builder.dart';
-import 'package:employee_management_app/src/presentation/pages/list-employee/components/emoloyee_tile.dart';
 import 'package:employee_management_app/src/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

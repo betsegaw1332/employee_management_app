@@ -36,13 +36,13 @@ class EmployeeTile extends StatelessWidget {
               style: TextStyle(
                   color: AppColors.lightBlackColor,
                   fontWeight: FontWeight.w600,
-                  fontSize: 15.sp),
+                  fontSize: 14.sp),
             ),
             Text(
               emloyeeData.employeeRole!,
               style: TextStyle(
                 color: AppColors.greyColor,
-                fontSize: 13.sp,
+                fontSize: 12.5.sp,
               ),
             ),
             Text(
